@@ -1,0 +1,21 @@
+package com.example.rinconsurapp.model
+
+import android.util.Patterns
+
+fun validarEmail(email: String): String? {
+    if (email.isBlank()) return "El email es obligatorio"
+    val ok = Patterns.EMAIL_ADDRESS.matcher(email.trim()).matches()
+    return if (!ok) "Formato de email inválido" else null
+}
+
+fun validarContraseña(contraseña: String): String? {
+    if (contraseña.isBlank()) return "La contraseña es obligatoria"   // Regla 1: no vacía
+    if (contraseña.length < 6) return "Mínimo 6 caracteres"           // Regla 2: largo mínimo
+    return null
+}
+
+fun validarAcceso(id: Int?): String? {
+    if (id == null) return "Selecciona un acceso"
+    if (Accesos.porId(id) == null) return "El acceso debe ser entre 1 y 4"
+    return null
+}
