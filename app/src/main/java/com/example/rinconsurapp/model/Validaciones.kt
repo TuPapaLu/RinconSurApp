@@ -9,8 +9,8 @@ fun validarEmail(email: String): String? {
 }
 
 fun validarContraseña(contraseña: String): String? {
-    if (contraseña.isBlank()) return "La contraseña es obligatoria"   // Regla 1: no vacía
-    if (contraseña.length < 6) return "Mínimo 6 caracteres"           // Regla 2: largo mínimo
+    if (contraseña.isBlank()) return "La contraseña es obligatoria"
+    if (contraseña.length < 6) return "Mínimo 6 caracteres"
     return null
 }
 
