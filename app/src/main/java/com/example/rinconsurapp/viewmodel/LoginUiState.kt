@@ -1,4 +1,4 @@
-package com.example.rinconsurapp.model
+package com.example.rinconsurapp.viewmodel
 
 data class LoginUiState(
     val email: String = "",

@@ -1,6 +1,7 @@
-package com.example.rinconsurapp.model
+package com.example.rinconsurapp.viewmodel
 
 import android.util.Patterns
+import com.example.rinconsurapp.model.Accesos
 
 fun validarEmail(email: String): String? {
     if (email.isBlank()) return "El email es obligatorio"
